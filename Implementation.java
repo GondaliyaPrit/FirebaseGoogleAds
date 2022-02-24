@@ -46,8 +46,16 @@ private void getadd() {
                 String id = dataSnapshot.getValue(String.class);
                 Log.e("id","gbanner  "+id);
               AdsUtils.setgbanner(context,id);
+
             }
-            
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                Log.e("TAG", "onCancelled: "+firebaseError.toString());
+            }
+        });
+    }
+
             
        //get interstrial id 
      
