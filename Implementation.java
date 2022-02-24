@@ -59,7 +59,8 @@ private void getadd() {
             
        //get interstrial id 
      
-         private void GInterstitial(String url) {
+          private void GInterstitial(String url) {
+
         Firebase.setAndroidContext(this);
         Firebase firebase = new Firebase(url);
         firebase.addValueEventListener(new ValueEventListener() {
@@ -72,12 +73,6 @@ private void getadd() {
                 AdsUtils.setGInterstitial(context,id);
             }
             @Override
-            public void onCancelled(FirebaseError firebaseError) {
-                Log.e("TAG", "onCancelled: "+firebaseError.toString());
-            }
-        });
-    }
-         @Override
             public void onCancelled(FirebaseError firebaseError) {
                 Log.e("TAG", "onCancelled: "+firebaseError.toString());
             }
